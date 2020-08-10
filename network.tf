@@ -1,5 +1,5 @@
 data "aws_vpc" "private_cloud" {
-  id = "${var.vpc_id}"
+  id = var.vpc_id
 }
 
 resource "aws_subnet" "private_network" {
@@ -11,13 +11,13 @@ resource "aws_subnet" "private_network" {
   tags = "${merge(
     local.default_tags,
     map(
-      "Name", "${var.name_prefix}-private_network"
+      "name", "${var.name_prefix}-private_network"
     )
   )}"
 }
 
 data "aws_route_table" "rtb" {
-  route_table_id = "${var.rtb_id}"
+  route_table_id = var.rtb_id
 }
 
 resource "aws_route_table_association" "private_network_rt_a" {
