@@ -15,3 +15,7 @@ variable "private_network_cidr" {
   type = string
 }
 
+variable "image" {
+  type = string
+}
+
