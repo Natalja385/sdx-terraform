@@ -1,6 +1,5 @@
 # USAGE
 
-Create configuration file `./config/awsrc` using template `./config/awsrc.template`
-
+Run aws configure to configure the aws cli
 Deploy the infrastructure using helper `./run.sh`
 
