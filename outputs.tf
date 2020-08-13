@@ -14,3 +14,7 @@ output "availability_zone" {
 output "server_ami" {
   value = data.aws_ami.linux_ami_hvm.id
 }
+
+output "server_ips" {
+  value = aws_instance.server.*.public_ip
+}

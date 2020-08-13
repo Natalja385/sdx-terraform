@@ -22,3 +22,11 @@ variable "image" {
 variable "ssh_key_file" {
   type = string
 }
+
+variable "number" {
+  type = string
+}
+
+variable "flavor" {
+  type = string
+}
