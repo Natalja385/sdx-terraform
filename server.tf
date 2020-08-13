@@ -12,3 +12,9 @@ data "aws_ami" "linux_ami_hvm" {
     values = ["hvm"]
   }
 }
+
+
+resource "aws_key_pair" "keypair" {
+  key_name = "${var.name_prefix}-key"
+  public_key = "${file("${var.ssh_key_file}.pub")}"
+}

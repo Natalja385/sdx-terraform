@@ -18,3 +18,8 @@ variable "private_network_cidr" {
 variable "image" {
   type = string
 }
+
+variable "ssh_key_file" {
+  type = string
+}
+
